@@ -1,0 +1,22 @@
+{
+  "name": "flappy-bird",
+  "version": "1.0.0",
+  "description": "flappy bird game clone",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpcoxjr/flappy-bird.git"
+  },
+  "author": "Bruce Patrick Cox Jr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bpcoxjr/flappy-bird/issues"
+  },
+  "homepage": "https://github.com/bpcoxjr/flappy-bird#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
