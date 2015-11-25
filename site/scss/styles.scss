@@ -1,0 +1,9 @@
+//Always import reset/Normalize files first, then dependencies such as Bourbon and Neat, the base styles, then everything else.
+//The * in the file path directive denotes importing all partials within those folders!
+
+@import "normalize";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+@import "components/*";
+@import "patterns/*";
