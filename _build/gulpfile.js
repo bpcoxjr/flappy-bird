@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+var gulpsync = require('gulp-sync')(gulp);
+var notify = require("gulp-notify");
 
 var bower = require('gulp-bower');
 var jshint = require('gulp-jshint');
@@ -19,7 +21,7 @@ gulp.task('bower', function() {
 
 // JavaScript linting task
 gulp.task('jshint', function() {
-  return gulp.src('../assets/js/*.js')
+  return gulp.src('../assets/js/main.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
@@ -45,9 +47,9 @@ gulp.task('copy-neat',function(){
 
 // Minify index
 gulp.task('html', function() {
-  return gulp.src('../assets/index.html')
+  return gulp.src('./index.html')
     .pipe(minifyHTML())
-    .pipe(gulp.dest('_build/'));
+    .pipe(gulp.dest('../'));
 });
 
 // JavaScript build task, removes whitespace and concatenates all files
@@ -57,14 +59,14 @@ gulp.task('scripts', function() {
     .pipe(source('app.js'))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(gulp.dest('_build/js'));
+    .pipe(gulp.dest('../assets/js'));
 });
 
 // Styles build task, concatenates all the files
 gulp.task('styles', function() {
   return gulp.src('../assets/css/*.css')
     .pipe(concat('styles.css'))
-    .pipe(gulp.dest('_build/css'));
+    .pipe(gulp.dest('../assets/css'));
 });
 
 // Image optimization task
@@ -77,15 +79,27 @@ gulp.task('images', function() {
 // Watch task
 gulp.task('watch', function() {
   gulp.watch('assets/js/*.js', ['jshint']);
-  gulp.watch('assets/scss/*.scss', ['sass']);
+  gulp.watch('./scss/**/*.scss', ['sass']);
+});
+
+gulp.task('notify', function() {
+  gulp.src("../assets/css/styles.css")
+  .pipe(notify("Hello Gulp!"));
 });
 
 // Default task
 gulp.task('default', ['jshint', 'sass', 'watch']);
 gulp.task('copy', ['copy-bourbon','copy-neat']);
 
-gulp.task('prebuild',['bower','copy']);
+gulp.task('prebuild', gulpsync.sync(['bower','copy']));
 gulp.task('preflight',['images'])
 
 // Build task
 gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles']);
+
+
+
+
+
+
+
