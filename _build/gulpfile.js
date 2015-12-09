@@ -13,6 +13,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var clean = require('gulp-clean');
 
 gulp.task('bower', function() {
   return bower()
@@ -43,6 +44,11 @@ gulp.task('copy-neat',function(){
     return gulp.src('./lib/neat/app/assets/stylesheets/**/*',{
         base:'./lib/neat/app/assets/stylesheets/'
     }).pipe(gulp.dest('./scss/neat/'));
+});
+
+gulp.task('clean',function(){
+	return gulp.src('./lib')
+	.pipe(clean());
 });
 
 // Minify index
@@ -91,7 +97,7 @@ gulp.task('notify', function() {
 gulp.task('default', ['jshint', 'sass', 'watch']);
 gulp.task('copy', ['copy-bourbon','copy-neat']);
 
-gulp.task('prebuild', gulpsync.sync(['bower','copy']));
+gulp.task('prebuild', gulpsync.sync(['bower','copy','clean']));
 gulp.task('preflight',['images'])
 
 // Build task
