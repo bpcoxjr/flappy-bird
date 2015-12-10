@@ -18,13 +18,10 @@ $html-color: #ff4d4d;
 
 $flappy-font: 'flappybirdyregular', sans-serif;
 
-<<<<<<< HEAD
-=======
 $mobile: 'min-width: 320px';
 $tablet: 'min-width: 768px';
 $desktop:'min-width: 1024px';
 
->>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
 $gtMobile: 'max-width: 321px';
 $gtTablet: 'max-width: 769px';
 $gtDesktop:'max-width: 1025px';
@@ -34,14 +31,12 @@ html {
 }
 
 img {
-<<<<<<< HEAD
-	max-width: 100%;
+ 	max-width: 100%;
 	height: auto !important;
 }
 .container {
 	@media screen and ($gtDesktop) {
 	width: 90%;
-=======
 	max-width:100%;
 	height:auto !important;
 }
@@ -49,37 +44,30 @@ img {
 .container {
 	@media screen and ($gtDesktop) {
 		width: 90%;
->>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
 	}
 	border-radius: 15px;
 	@media screen and ($gtMobile) {
 		max-width: 440px;
 		margin: 0 auto;
 		.top-navigation{
-<<<<<<< HEAD
 			display: flex;
 			> ul {
 				flex-grow: 1;
-=======
 			display:flex;
 			> ul {
 				flex-grow:1;
->>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
 				flex-wrap: wrap;
 			}
 		}
 	}
 	@media screen and ($gtTablet) {
 		max-width: 770px;
-<<<<<<< HEAD
 		.top-navigation{
 			display: flex;
 			> ul {
 				flex-wrap: wrap;
 			}
 		}
-=======
->>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
 	}
 	@media screen and ($gtDesktop) {
 		max-width: 100%;
@@ -97,7 +85,6 @@ nav {
   padding-left: 1em;
   padding-right: 1em;
   html.no-flexbox & {
-<<<<<<< HEAD
   	@media screen and ($gtMobile){
   		ul li: first-child {
   			float: left;
@@ -109,19 +96,6 @@ nav {
   			display: inline;
   		}
   	}
-=======
-	  @media screen and ($gtMobile) {
-		  ul li:first-child {
-			float: left;
-		  }
-		  ul li:last-child {
-		  	float: right;
-		  }		
-		  li {
-		    display: inline;
-		  }
-	  }
->>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
   }
   a {
   	text-decoration: none;
