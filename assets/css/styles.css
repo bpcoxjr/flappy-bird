@@ -14,16 +14,27 @@ html {
 html {
   background-color: #ff4d4d; }
 
+img {
+  max-width: 100%;
+  height: auto !important; }
+
 .container {
-  width: 90%;
   border-radius: 15px;
   background-color: #00e68a;
   text-align: center; }
+<<<<<<< HEAD
   @media screen and (max-width: 321px) {
+=======
+  @media screen and (max-width: 1025px) {
+    .container {
+      width: 90%; } }
+  @media screen and (min-width: 320px) {
+>>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
     .container {
       max-width: 440px;
       margin: 0 auto; }
       .container .top-navigation {
+<<<<<<< HEAD
         flex-wrap: wrap; } }
   @media screen and (max-width: 769px) {
     .container {
@@ -33,6 +44,16 @@ html {
         .container .top-navigation > ul {
           flex-wrap: wrap; } }
   @media screen and (max-width: 961px) {
+=======
+        display: flex; }
+        .container .top-navigation > ul {
+          flex-grow: 1;
+          flex-wrap: wrap; } }
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 770px; } }
+  @media screen and (min-width: 1024px) {
+>>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
     .container {
       max-width: 100%; } }
 
@@ -44,12 +65,13 @@ nav {
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em; }
-  nav ul li:first-child {
-    float: left; }
-  nav ul li:last-child {
-    float: right; }
-  nav li {
-    display: inline; }
+  @media screen and (max-width: 321px) {
+    html.no-flexbox nav ul li:first-child {
+      float: left; }
+    html.no-flexbox nav ul li:last-child {
+      float: right; }
+    html.no-flexbox nav li {
+      display: inline; } }
   nav a {
     text-decoration: none;
     font-size: 5em;

@@ -46,9 +46,15 @@ gulp.task('copy-neat',function(){
     }).pipe(gulp.dest('./scss/neat/'));
 });
 
+<<<<<<< HEAD
 gulp.task('clean', function(){
     return gulp.src('./lib')
     .pipe(clean());
+=======
+gulp.task('clean',function(){
+	return gulp.src('./lib')
+	.pipe(clean());
+>>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
 });
 
 // Minify index
@@ -97,7 +103,11 @@ gulp.task('notify', function() {
 gulp.task('default', ['jshint', 'sass', 'watch']);
 gulp.task('copy', ['copy-bourbon','copy-neat']);
 
+<<<<<<< HEAD
 gulp.task('prebuild', gulpsync.sync(['bower','copy', 'clean']));
+=======
+gulp.task('prebuild', gulpsync.sync(['bower','copy','clean']));
+>>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
 gulp.task('preflight',['images'])
 
 // Build task
