@@ -14,7 +14,6 @@ $background-color: #00e68a;
 $hover-link-color: #006666;
 $nav-font-color: #404040;
 $overlay-color: #66c2ff;
-$html-color: #ff4d4d;
 
 $flappy-font: 'flappybirdyregular', sans-serif;
 
@@ -24,20 +23,14 @@ $desktop:'min-width: 1024px';
 
 $gtMobile: 'max-width: 321px';
 $gtTablet: 'max-width: 769px';
-$gtDesktop:'max-width: 1025px';
+$gtDesktop:'max-width: 1600px';
  
 html {
-	background-color: $html-color;
+	background-color: #ff4d4d;
 }
 
 img {
- 	max-width: 100%;
-	height: auto !important;
-}
-.container {
-	@media screen and ($gtDesktop) {
-	width: 90%;
-	max-width:100%;
+	max-width: 50%;
 	height:auto !important;
 }
 
@@ -46,13 +39,10 @@ img {
 		width: 90%;
 	}
 	border-radius: 15px;
-	@media screen and ($gtMobile) {
+	@media screen and ($mobile)	{
 		max-width: 440px;
 		margin: 0 auto;
 		.top-navigation{
-			display: flex;
-			> ul {
-				flex-grow: 1;
 			display:flex;
 			> ul {
 				flex-grow:1;
@@ -60,17 +50,12 @@ img {
 			}
 		}
 	}
-	@media screen and ($gtTablet) {
+	@media screen and ($tablet) {
 		max-width: 770px;
-		.top-navigation{
-			display: flex;
-			> ul {
-				flex-wrap: wrap;
-			}
-		}
 	}
-	@media screen and ($gtDesktop) {
+	@media screen and ($desktop) {
 		max-width: 100%;
+		margin: 0 auto;
 	}
   background-color: $background-color;
   text-align: center;
@@ -85,17 +70,17 @@ nav {
   padding-left: 1em;
   padding-right: 1em;
   html.no-flexbox & {
-  	@media screen and ($gtMobile){
-  		ul li: first-child {
-  			float: left;
-  		}
-  		ul li: last-child {
-  			float: right;
-  		}
-  		li{
-  			display: inline;
-  		}
-  	}
+	  @media screen and ($gtMobile) {
+		  ul li:first-child {
+			float: left;
+		  }
+		  ul li:last-child {
+		  	float: right;
+		  }		
+		  li {
+		    display: inline;
+		  }
+	  }
   }
   a {
   	text-decoration: none;
@@ -213,8 +198,4 @@ footer {
 		font-family: $flappy-font;
 		font-color: $font-color;
 	}
-
-
-
-
 }

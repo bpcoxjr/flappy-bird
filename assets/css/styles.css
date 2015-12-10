@@ -15,15 +15,14 @@ html {
   background-color: #ff4d4d; }
 
 img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto !important; }
 
 .container {
   border-radius: 15px;
   background-color: #00e68a;
   text-align: center; }
-  @media screen and (max-width: 321px) {
-  @media screen and (max-width: 1025px) {
+  @media screen and (max-width: 1600px) {
     .container {
       width: 90%; } }
   @media screen and (min-width: 320px) {
@@ -31,15 +30,6 @@ img {
       max-width: 440px;
       margin: 0 auto; }
       .container .top-navigation {
-        flex-wrap: wrap; } }
-  @media screen and (max-width: 769px) {
-    .container {
-      max-width: 770px; }
-      .container .top-navigation {
-        display: flex; }
-        .container .top-navigation > ul {
-          flex-wrap: wrap; } }
-  @media screen and (max-width: 961px) {
         display: flex; }
         .container .top-navigation > ul {
           flex-grow: 1;
@@ -49,7 +39,8 @@ img {
       max-width: 770px; } }
   @media screen and (min-width: 1024px) {
     .container {
-      max-width: 100%; } }
+      max-width: 100%;
+      margin: 0 auto; } }
 
 nav {
   width: 100%;
