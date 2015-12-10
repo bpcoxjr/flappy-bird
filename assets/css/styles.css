@@ -34,7 +34,6 @@ img {
       max-width: 440px;
       margin: 0 auto; }
       .container .top-navigation {
-<<<<<<< HEAD
         flex-wrap: wrap; } }
   @media screen and (max-width: 769px) {
     .container {
@@ -44,7 +43,6 @@ img {
         .container .top-navigation > ul {
           flex-wrap: wrap; } }
   @media screen and (max-width: 961px) {
-=======
         display: flex; }
         .container .top-navigation > ul {
           flex-grow: 1;
@@ -53,7 +51,6 @@ img {
     .container {
       max-width: 770px; } }
   @media screen and (min-width: 1024px) {
->>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
     .container {
       max-width: 100%; } }
 
