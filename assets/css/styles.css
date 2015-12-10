@@ -22,14 +22,11 @@ img {
   border-radius: 15px;
   background-color: #00e68a;
   text-align: center; }
-<<<<<<< HEAD
   @media screen and (max-width: 321px) {
-=======
   @media screen and (max-width: 1025px) {
     .container {
       width: 90%; } }
   @media screen and (min-width: 320px) {
->>>>>>> d122fb6426ffcc4d24f981e722500ab830980d2e
     .container {
       max-width: 440px;
       margin: 0 auto; }
