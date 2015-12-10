@@ -19,22 +19,22 @@ html {
   border-radius: 15px;
   background-color: #00e68a;
   text-align: center; }
-  @media screen and (min-width: 320px) {
+  @media screen and (max-width: 321px) {
     .container {
       max-width: 440px;
       margin: 0 auto; }
       .container .top-navigation {
         flex-wrap: wrap; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 769px) {
     .container {
-      max-width: 770px;
-      margin: 0 auto; }
+      max-width: 770px; }
       .container .top-navigation {
-        flex-wrap: wrap; } }
-  @media screen and (min-width: 1024px) {
+        display: flex; }
+        .container .top-navigation > ul {
+          flex-wrap: wrap; } }
+  @media screen and (max-width: 961px) {
     .container {
-      max-width: 100%;
-      margin: 0 auto; } }
+      max-width: 100%; } }
 
 nav {
   width: 100%;

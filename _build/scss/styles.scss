@@ -14,37 +14,49 @@ $background-color: #00e68a;
 $hover-link-color: #006666;
 $nav-font-color: #404040;
 $overlay-color: #66c2ff;
+$html-color: #ff4d4d;
 
 $flappy-font: 'flappybirdyregular', sans-serif;
 
-$mobile: 'min-width: 320px';
-$tablet: 'min-width: 768px';
-$desktop:'min-width: 1024px';
+$gtMobile: 'max-width: 321px';
+$gtTablet: 'max-width: 769px';
+$gtDesktop:'max-width: 1025px';
  
 html {
-	background-color: #ff4d4d;
+	background-color: $html-color;
 }
 
+img {
+	max-width: 100%;
+	height: auto !important;
+}
 .container {
+	@media screen and ($gtDesktop) {
 	width: 90%;
+	}
 	border-radius: 15px;
-	@media screen and ($mobile)	{
+	@media screen and ($gtMobile) {
 		max-width: 440px;
 		margin: 0 auto;
 		.top-navigation{
-			flex-wrap: wrap;
+			display: flex;
+			> ul {
+				flex-grow: 1;
+				flex-wrap: wrap;
+			}
 		}
 	}
-	@media screen and ($tablet) {
+	@media screen and ($gtTablet) {
 		max-width: 770px;
-		margin: 0 auto;
 		.top-navigation{
-			flex-wrap: wrap;
+			display: flex;
+			> ul {
+				flex-wrap: wrap;
+			}
 		}
 	}
-	@media screen and ($desktop) {
+	@media screen and ($gtDesktop) {
 		max-width: 100%;
-		margin: 0 auto;
 	}
   background-color: $background-color;
   text-align: center;
@@ -58,14 +70,18 @@ nav {
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  ul li:first-child {
-	float: left;
-  }
-  ul li:last-child {
-  	float: right;
-  }
-  li {
-    display: inline;
+  html.no-flexbox & {
+  	@media screen and ($gtMobile){
+  		ul li: first-child {
+  			float: left;
+  		}
+  		ul li: last-child {
+  			float: right;
+  		}
+  		li{
+  			display: inline;
+  		}
+  	}
   }
   a {
   	text-decoration: none;
