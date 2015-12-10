@@ -20,27 +20,38 @@ $flappy-font: 'flappybirdyregular', sans-serif;
 $mobile: 'min-width: 320px';
 $tablet: 'min-width: 768px';
 $desktop:'min-width: 1024px';
+
+$gtMobile: 'max-width: 321px';
+$gtTablet: 'max-width: 769px';
+$gtDesktop:'max-width: 1025px';
  
 html {
 	background-color: #ff4d4d;
 }
 
+img {
+	max-width:100%;
+	height:auto !important;
+}
+
 .container {
-	width: 90%;
+	@media screen and ($gtDesktop) {
+		width: 90%;
+	}
 	border-radius: 15px;
 	@media screen and ($mobile)	{
 		max-width: 440px;
 		margin: 0 auto;
 		.top-navigation{
-			flex-wrap: wrap;
+			display:flex;
+			> ul {
+				flex-grow:1;
+				flex-wrap: wrap;
+			}
 		}
 	}
 	@media screen and ($tablet) {
 		max-width: 770px;
-		margin: 0 auto;
-		.top-navigation{
-			flex-wrap: wrap;
-		}
 	}
 	@media screen and ($desktop) {
 		max-width: 100%;
@@ -58,14 +69,18 @@ nav {
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  ul li:first-child {
-	float: left;
-  }
-  ul li:last-child {
-  	float: right;
-  }
-  li {
-    display: inline;
+  html.no-flexbox & {
+	  @media screen and ($gtMobile) {
+		  ul li:first-child {
+			float: left;
+		  }
+		  ul li:last-child {
+		  	float: right;
+		  }		
+		  li {
+		    display: inline;
+		  }
+	  }
   }
   a {
   	text-decoration: none;
