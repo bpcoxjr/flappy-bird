@@ -70,8 +70,13 @@ request(cssUrl).pipe(fs.createWriteStream(cssPath)).on('close', function() {
         if (err) {
           throw new Error(err);
         } else {
+<<<<<<< HEAD
           fs.WriteFileSync('index_critical.html', '<style>' + output + '</style>');
           console.log(output);
+=======
+            fs.writeFileSync('index_critical.html','<style>' + output + '</style>');
+            console.log(output);
+>>>>>>> 3171eb4b4c379d408ee056dc861ac35535a28e5f
         }
       });
     }
