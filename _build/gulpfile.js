@@ -14,6 +14,7 @@ var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var clean = require('gulp-clean');
+var criticalcss = require("criticalcss");
 
 gulp.task('bower', function() {
   return bower()
@@ -51,9 +52,20 @@ gulp.task('clean', function(){
     .pipe(clean());
 });
 
-gulp.task('clean',function(){
-	return gulp.src('./lib')
-	.pipe(clean());
+criticalcss.findCritical("http://www.bpatrickcox.com", function(err, output){
+  if( err ){
+    throw new Error(err);
+  } else {
+    fs.writeFileSync(filename, output);
+  }
+});
+ 
+criticalcss.getRules("../assets/css/styles.css", function(err, output){
+  if( err ){
+    throw new Error(err);
+  } else {
+    fs.writeFileSync(filename, output);
+  }
 });
 
 // Minify index

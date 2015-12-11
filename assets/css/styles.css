@@ -88,8 +88,8 @@ nav {
     margin: auto auto;
     border: 1px solid rgba(0, 0, 0, 0.1); }
   .overlay p {
-    margin: 0;
-    padding: 10px 0;
+    margin: 10px 10px;
+    padding: 10px 10px 10px 10px;
     line-height: 2em;
     text-align: justify; }
   .overlay a {

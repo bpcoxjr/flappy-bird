@@ -14,16 +14,12 @@
 	<!-- Stylesheet Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css"/>
     <link rel="stylesheet" href="assets/css/styles.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-	<!-- Javascript -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/app.js"></script>
-
+    <!-- Critical CSS -->
+    <style></style>
 </head>
 
 <body class="container">
-
 	<!-- Navigation Section -->
 	<nav class="top-navigation">
     <ul>
@@ -85,5 +81,14 @@
             <i class="fa fa-github"></i><a class="github" href="https://github.com/bpcoxjr" target="_blank" title="Checkout my Github repositories">Github</a>
             <p class="mysite"><a href="http://www.bpatrickcox.com">Created by B. Patrick Cox, Jr.</a></p>
 </footer>
+
+<!-- Javascript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+<!-- append Font Awesome! to the head-->
+	<script>$(document).ready(function{
+		$('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">');
+	});</script>
 </body>
 </html>
