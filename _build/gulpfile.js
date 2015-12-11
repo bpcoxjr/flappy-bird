@@ -70,7 +70,8 @@ request(cssUrl).pipe(fs.createWriteStream(cssPath)).on('close', function() {
         if (err) {
           throw new Error(err);
         } else {
-          console.log(output);
+            fs.writeFileSync('index_critical.html','<style>' + output + '</style>');
+            console.log(output);
         }
       });
     }
