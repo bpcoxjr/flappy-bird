@@ -66,10 +66,11 @@ request(cssUrl).pipe(fs.createWriteStream(cssPath)).on('close', function() {
     if (err) {
       throw new Error(err);
     } else {
-      criticalcss.findCritical("https://bpcoxjr.github.io/flappy-bird", { rules: JSON.parse(output) }, function(err, output) {
+      criticalcss.findCritical("./index.html", { rules: JSON.parse(output) }, function(err, output) {
         if (err) {
           throw new Error(err);
         } else {
+          fs.WriteFileSync('index_critical.html', '<style>' + output + '</style>');
           console.log(output);
         }
       });
