@@ -18,6 +18,7 @@
   "homepage": "https://github.com/bpcoxjr/flappy-bird#readme",
   "devDependencies": {
     "browserify": "^12.0.1",
+    "criticalcss": "^0.6.1",
     "gulp": "^3.9.0",
     "gulp-bower": "0.0.11",
     "gulp-clean": "^0.3.1",
@@ -35,6 +36,7 @@
     "gulp-uglify": "^1.5.1",
     "node-bourbon": "^4.2.3",
     "node-neat": "^1.7.2",
+    "request": "^2.67.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
