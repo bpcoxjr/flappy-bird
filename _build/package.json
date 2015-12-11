@@ -36,11 +36,8 @@
     "gulp-uglify": "^1.5.1",
     "node-bourbon": "^4.2.3",
     "node-neat": "^1.7.2",
-<<<<<<< HEAD
     "request": "2.67.0",
-=======
     "request": "^2.67.0",
->>>>>>> 614a76cd06df4553ad8c0d9bde68a9a3ff42cd09
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
