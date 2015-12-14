@@ -40,7 +40,8 @@ img {
         .container .top-navigation > ul {
           flex-grow: 1;
           flex-wrap: wrap;
-          display: flex; } }
+          display: flex;
+          text-align: center; } }
   @media screen and (min-width: 768px) {
     .container {
       max-width: 770px; }
