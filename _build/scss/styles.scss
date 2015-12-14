@@ -59,6 +59,15 @@ img {
 	}
   background-color: $background-color;
   text-align: center;
+  h1 {
+  	@media screen and ($mobile) {
+  		font-size: 5em;
+  		padding-top: 1em;
+  	}
+  	@media screen and ($tablet) {
+  		font-size: 10em;
+  	}
+  }
  }
 
 nav {
