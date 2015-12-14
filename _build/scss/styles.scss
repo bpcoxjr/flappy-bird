@@ -31,7 +31,6 @@ html {
 
 img {
 	max-width: 50%;
- 	max-width: 100%;
 	height: auto !important;
 }
 .container {
@@ -39,6 +38,7 @@ img {
 	width: 90%;
 	max-width:100%;
 	height:auto !important;
+	}
 }
 
 .container {
@@ -53,10 +53,8 @@ img {
 			display: flex;
 			> ul {
 				flex-grow: 1;
-			display:flex;
-			> ul {
-				flex-grow:1;
 				flex-wrap: wrap;
+				display: flex;
 			}
 		}
 	}
@@ -72,6 +70,21 @@ img {
 	@media screen and ($desktop) {
 		max-width: 100%;
 		margin: 0 auto;
+		.top-navigation{
+			display: flex;
+			> ul {
+				flex-wrap: wrap;
+			}
+			> ul li{
+				flex: 1 0 50%;
+			}
+			> ul li:first-child{
+				text-align: left;
+			}
+			> ul li:last-child{
+				text-align: right;
+			}
+		}
 	}
   background-color: $background-color;
   text-align: center;
@@ -105,19 +118,19 @@ nav {
 		  li {
 		    display: inline;
 		  }
-	  }
-  	@media screen and ($gtMobile){
-  		ul li: first-child {
+	    }
+  		@media screen and ($gtMobile){
+  			ul li:first-child {
   			float: left;
-  		}
-  		ul li: last-child {
+  			}
+  			ul li:last-child {
   			float: right;
-  		}
-  		li{
+  			}
+  			li{
   			display: inline;
-  		}
-  	}
-  }
+  			}
+ 		}
+    }
   a {
   	text-decoration: none;
     font-size: 5em;
@@ -224,7 +237,7 @@ footer {
 		font-size: 2em;
 		font-family: $flappy-font;
 		font-color: $font-color;
-		& hover {
+		&:hover {
 			color: $hover-link-color;
 		}
 	}
