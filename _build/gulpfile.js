@@ -59,8 +59,8 @@ var criticalcss = require("criticalcss");
 var fs = require('fs');
 var tmpDir = require('os').tmpdir();
  
-var cssUrl = 'http://bpcoxjr.github.io/flappy-bird/style.css';
-var cssPath = path.join( tmpDir, 'style.css' );
+var cssUrl = 'http://bpcoxjr.github.io/flappy-bird/styles.css';
+var cssPath = path.join( tmpDir, 'styles.css' );
 request(cssUrl).pipe(fs.createWriteStream(cssPath)).on('close', function() {
   criticalcss.getRules(cssPath, function(err, output) {
     if (err) {
@@ -76,6 +76,13 @@ request(cssUrl).pipe(fs.createWriteStream(cssPath)).on('close', function() {
       });
     }
   });
+});
+
+//Concat three HTML files into one before minifying
+gulp.task('concatHTML', function(){
+  return gulp.src(['./index_top.html', './index_critical.html', './index_bottom.html'])
+  .pipe(concat('./index.html'))
+  .pipe(gulp.dest('../'));
 });
 
 // Minify index
@@ -128,7 +135,7 @@ gulp.task('prebuild', gulpsync.sync(['bower','copy','clean']));
 gulp.task('preflight',['images'])
 
 // Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles']);
+gulp.task('build', ['jshint', 'sass', 'concatHTML', 'html', 'scripts', 'styles', 'images']);
 
 
 
