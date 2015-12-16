@@ -10,7 +10,4 @@ $(document).ready(function(){
 		console.log("User clicked to close instructions!");
 		$(".overlay").fadeOut(1200);
 	});
-
-
-
 });
