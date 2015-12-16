@@ -19,11 +19,14 @@
     "bourbon": "~4.2.6"
   },
   "exportsOverride": {
-      "bourbon": {
-          "":"app/assets/stylesheets/"
-      },
-      "neat": {
-          "":"app/assets/stylesheets/"
-      }
+    "bourbon": {
+      "": "app/assets/stylesheets/"
+    },
+    "neat": {
+      "": "app/assets/stylesheets/"
+    }
+  },
+  "dependencies": {
+    "jquery": "2.1.4"
   }
 }

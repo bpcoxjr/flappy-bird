@@ -47,6 +47,12 @@ gulp.task('copy-neat',function(){
     }).pipe(gulp.dest('./scss/neat/'));
 });
 
+gulp.task('copy-jquery',function(){
+    return gulp.src('./lib/jquery/dist/jquery.min.js',{
+        base:'./lib/jquery/dist/'
+    }).pipe(gulp.dest('../assets/js/vendor/jquery/'));
+});
+
 gulp.task('clean', function(){
     return gulp.src('./lib')
     .pipe(clean());
@@ -82,7 +88,7 @@ request(cssUrl).pipe(fs.createWriteStream(cssPath)).on('close', function() {
 gulp.task('concatHTML', function(){
   return gulp.src(['./index_top.html', './index_critical.html', './index_bottom.html'])
   .pipe(concat('./index.html'))
-  .pipe(gulp.dest('../'));
+  .pipe(gulp.dest('./'));
 });
 
 // Minify index
@@ -129,13 +135,13 @@ gulp.task('notify', function() {
 
 // Default task
 gulp.task('default', ['jshint', 'sass', 'watch']);
-gulp.task('copy', ['copy-bourbon','copy-neat']);
+gulp.task('copy', ['copy-bourbon','copy-neat','copy-jquery']);
 
 gulp.task('prebuild', gulpsync.sync(['bower','copy','clean']));
 gulp.task('preflight',['images'])
 
 // Build task
-gulp.task('build', ['jshint', 'sass', 'concatHTML', 'html', 'scripts', 'styles', 'images']);
+gulp.task('build', gulpsync.async(['jshint', ['concatHTML', 'html'], 'scripts', ['sass','styles'], 'images']));
 
 
 
