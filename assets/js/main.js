@@ -12,4 +12,5 @@ $(document).ready(function(){
 	});
 
 	$("h1").velocity("transition.slideUpIn", 2500);
+	$(".gamevisuals").velocity("transition.fadeIn", 2500);
 });

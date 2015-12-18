@@ -65,7 +65,7 @@ var criticalcss = require("criticalcss");
 var fs = require('fs');
 var tmpDir = require('os').tmpdir();
  
-var cssUrl = 'http://bpcoxjr.github.io/flappy-bird/styles.css';
+var cssUrl = 'http://bpcoxjr.github.io/flappy-bird/assets/css/styles.css';
 var cssPath = path.join( tmpDir, 'styles.css' );
 request(cssUrl).pipe(fs.createWriteStream(cssPath)).on('close', function() {
   criticalcss.getRules(cssPath, function(err, output) {

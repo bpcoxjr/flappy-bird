@@ -1,6 +1,46 @@
-<style>.container{ margin-top: 50px; margin-right: auto; margin-bottom: 40px; margin-left: auto; width: 600px; text-align: center; }
-a{ color: rgb(65, 131, 196); text-decoration: none; }
-h1{ width: 800px; position: relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin-top: 0px; margin-right: 0px; margin-bottom: 50px; margin-left: 0px; text-shadow: rgb(255, 255, 255) 0px 1px 0px; }
-p{ color: rgba(0, 0, 0, 0.496094); margin-top: 20px; margin-right: 0px; margin-bottom: 20px; margin-left: 0px; line-height: 1.6; }
-ul{ list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 25px; margin-right: 0px; margin-bottom: 25px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
-li{ display: table-cell; font-weight: bold; width: 1%; }</style>
+<style>html{ box-sizing: border-box; }
+*{ box-sizing: inherit; }
+html{ background-color: rgb(255, 77, 77); }
+img{ max-width: 50%; height: auto !important; }
+@media screen and (max-width: 1600px){
+.container{ width: 90%; max-width: 100%; height: auto !important; }
+}
+.container{ border-top-left-radius: 15px 15px; border-top-right-radius: 15px 15px; border-bottom-right-radius: 15px 15px; border-bottom-left-radius: 15px 15px; background-color: rgb(0, 230, 138); text-align: center; }
+@media screen and (max-width: 1600px){
+.container{ width: 90%; }
+}
+@media screen and (min-width: 320px){
+.container{ max-width: 440px; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; }
+.container .top-navigation{ }
+.container .top-navigation > ul{ text-align: center; }
+}
+@media screen and (min-width: 768px){
+.container{ max-width: 770px; }
+.container .top-navigation{ }
+.container .top-navigation > ul{ }
+}
+@media screen and (min-width: 1024px){
+.container{ max-width: 100%; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; }
+.container .top-navigation{ }
+.container .top-navigation > ul{ }
+.container .top-navigation > ul li{ }
+.container .top-navigation > ul li:first-child{ text-align: left; }
+.container .top-navigation > ul li:last-child{ text-align: right; }
+}
+@media screen and (min-width: 320px){
+.container h1{ font-size: 5em; }
+}
+@media screen and (min-width: 768px){
+.container h1{ font-size: 10em; }
+}
+nav{ width: 100%; height: 5em; margin-top: 2em; padding-top: 1em; padding-left: 1em; padding-right: 1em; }
+nav a{ text-decoration: none; font-size: 5em; font-family: flappybirdyregular, sans-serif; -webkit-font-smoothing: antialiased; color: rgb(64, 64, 64); }
+.overlay{ width: 100%; height: 100%; color: rgb(64, 64, 64); background-color: rgb(102, 194, 255); position: absolute; top: 0px; left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; z-index: 1000; display: none; }
+.overlay .content{ color: rgb(255, 255, 255); background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(231, 76, 60); position: relative; height: auto; width: 600px; border-top-left-radius: 3px 3px; border-top-right-radius: 3px 3px; border-bottom-right-radius: 3px 3px; border-bottom-left-radius: 3px 3px; top: 15%; margin-top: auto; margin-right: auto; margin-bottom: auto; margin-left: auto; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgba(0, 0, 0, 0.0976562); border-right-color: rgba(0, 0, 0, 0.0976562); border-bottom-color: rgba(0, 0, 0, 0.0976562); border-left-color: rgba(0, 0, 0, 0.0976562); background-position: initial initial; background-repeat: initial initial; }
+.overlay p{ margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; line-height: 2em; text-align: justify; }
+.overlay a{ font-size: 0.8em; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(31, 37, 61); color: rgb(149, 165, 166); padding-top: 0.5em; padding-right: 2em; padding-bottom: 0.5em; padding-left: 2em; margin-bottom: 50px; border-top-left-radius: 3px 3px; border-top-right-radius: 3px 3px; border-bottom-right-radius: 3px 3px; border-bottom-left-radius: 3px 3px; background-position: initial initial; background-repeat: initial initial; }
+header h1{ color: rgb(64, 64, 64); font-family: flappybirdyregular, sans-serif; font-size: 10em; margin-bottom: 0.25em; text-align: center; }
+ul{ -webkit-padding-start: 0px; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; text-decoration: none; }
+ul li{ text-decoration: none; list-style-type: none; }
+ul img{ margin-left: auto; margin-right: auto; border-top-left-radius: 20px 20px; border-top-right-radius: 20px 20px; border-bottom-right-radius: 20px 20px; border-bottom-left-radius: 20px 20px; box-shadow: rgb(136, 136, 136) 25px 25px 10px; }
+ul h2{ color: rgb(64, 64, 64); font-family: flappybirdyregular, sans-serif; font-size: 5.5em; -webkit-font-smoothing: antialiased; }</style>
