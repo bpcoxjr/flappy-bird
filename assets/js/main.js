@@ -10,7 +10,7 @@ $(document).ready(function(){
 		console.log("User clicked to close instructions!");
 		$(".overlay").fadeOut(1200);
 	});
-
+	//Use velocity.js to animate elements on the page
 	$("h1").velocity("transition.slideUpIn", 2500);
 	$(".gamevisuals").velocity("transition.fadeIn", 2500);
 });

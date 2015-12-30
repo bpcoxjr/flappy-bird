@@ -32,19 +32,23 @@
 <section class="gamevisuals">
 	<ul>
 		<li>
-			<img src="assets/img/meetflappy.jpg" width="1500" height="1000">
+			<img src="assets/img/meetflappy.jpg" 
+				 srcset="assets/img/meetflappy.jpg, assets/img/meetflappymobile.jpg">
 			<h2>Meet Flappy, a bird who needs your help to fly!</h2>
 		</li>
 		<li>
-			<img src="assets/img/flappyobstacles.jpg" width="1500" height="1000">
+			<img src="assets/img/flappyobstacles.jpg"
+				 srcset="assets/img/flappyobstacles.jpg, assets/img/flappyobstaclesmobile.jpg">
 			<h2>Help Flappy navigate his way through increasingly difficult obstacles!</h2>
 		</li>
 		<li>
-			<img src="assets/img/flappyscore.jpg" width="1500" height="1000">
+			<img src="assets/img/flappyscore.jpg"
+				 srcset="assets/img/flappyscore.jpg, assets/img/flappyscoremobile.jpg">
 			<h2>Accumulate points as Flappy flies farther and farther!</h2>
 		</li>
 		<li>
-			<img src="assets/img/flappycrash.jpg" width"1500" height="1000">
+			<img src="assets/img/flappycrash.jpg"
+			  	 srcset="assets/img/flappycrash.jpg, assets/img/flappycrashmobile.jpg">
 			<h2>But hit an obstacle and it's game over!</h2>
 		</li>
 	</ul>
@@ -70,7 +74,8 @@
 <!-- include velocity.js for animations -->
 	<script src="http://cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
 	<script src="http://cdn.jsdelivr.net/velocity/1.2.2/velocity.ui.min.js"></script>
-
+<!-- include PictureFill -->
+	<script type="text/javascript" scr="assets/js/picturefill.min.js" async></script>
 <!-- append Font Awesome! to the head-->
 	<script>$(document).ready(function(){
 		$('head').append('<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">');
