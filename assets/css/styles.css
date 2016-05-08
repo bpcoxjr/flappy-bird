@@ -159,7 +159,7 @@ ul {
     font-size: 5.5em;
     -webkit-font-smoothing: antialiased; }
 
-.play a {
+.play button {
   color: #00cacc;
   background-color: #dc3c3c;
   height: 5em;
