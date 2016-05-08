@@ -117,9 +117,9 @@ gulp.task('styles', function() {
 
 // Image optimization task
 gulp.task('images', function() {
-  return gulp.src('../assets/img/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('_build/img'));
+ return gulp.src('../assets/img/*')
+   .pipe(imagemin())
+   .pipe(gulp.dest('_build/img'));
 });
 
 // Watch task

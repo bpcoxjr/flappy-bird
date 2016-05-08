@@ -30,7 +30,7 @@ html {
 }
 
 img {
-	max-width: 50%;
+	max-width: 100%;
 	height: auto !important;
 }
 .container {
@@ -87,7 +87,7 @@ img {
 			}
 		}
 	}
-  background-color: $background-color;
+  //background-color: $background-color;
   text-align: center;
   h1 {
   	@media screen and ($mobile) {
